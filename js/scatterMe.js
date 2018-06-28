@@ -52,10 +52,10 @@ function init () {
 
 function draw (num) {
 
-    function _draw(samples, labels) {
+    function _draw(samples) {
 
-        var sampleData = samples.slice(0, num);
-        var sampleLabels = labels.slice(0, num);
+        var sampleData = samples.data.slice(0, num);
+        var sampleLabels = samples.labels.slice(0, num);
 
         worker.postMessage({
             type: 'INPUT_DATA',
@@ -67,10 +67,10 @@ function draw (num) {
         var randHeight = Math.random() * embeddingSpace.clientHeight - 14;
 
         var xScale = d3.scaleLinear()
-            .domain([0, d3.max(sampleData, function(d) { return d[0]; })])
+            .domain([d3.min(sampleData, function(d) { return d[0]; })-0.05, d3.max(sampleData, function(d) { return d[0]; })+0.05])
             .range([0, 600]);
         var yScale = d3.scaleLinear()
-            .domain([0,d3.max(sampleData, function(d) { return d[1]; })])
+            .domain([d3.min(sampleData, function(d) { return d[1]; })-0.05,d3.max(sampleData, function(d) { return d[1]; })+0.05])
             .range([0, 900]);
 
         svg.selectAll("circle")
@@ -84,8 +84,32 @@ function draw (num) {
             .attr("cy", function(d) {
                 return yScale(d[1]);
             })
-            .attr("r", 5);
-
+            .attr("r", 5)
+            /*.append("title")
+            .text(function (d) {
+                return d;
+            })*/
+            /*.on("mouseover", function(d){
+                var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.bandwidth() / 2;
+                var yPosition = parseFloat(d3.select(this).attr("y")) + 14;
+                svg.append("text")
+                    .attr("id", "tooltip")
+                    .attr("x", xPosition)
+                    .attr("y", yPosition)
+                    .attr("text-anchor", "middle")
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "11px")
+                    .attr("font-weight", "bold")
+                    .attr("fill", "black")
+                    .text(d);
+            })
+            .on("mouseout", function() {
+                //Remove the tooltip
+                d3.select("#tooltip").remove();
+            })*/
+            .on("click", function (d) {
+                console.log(d)
+            })
         /*$('#embedding-space').empty();
         var embeddingSpace = document.getElementById('embedding-space');
         for (var n = 0; n < num; n++) {
@@ -112,15 +136,26 @@ function draw (num) {
     if (SAMPLE_DATA) {
         _draw(SAMPLE_DATA);
     } else {
+        d3.json("ivector.json", function(data){
+            console.log(data);
+        })
         $.getJSON('ivector.json', function (samples) {
-            SAMPLE_DATA = _.values(samples.vectors);
-            LABEL_DATA = _.keys(samples.vectors);
-//                LABEL_DATA = LABEL_DATA.forEach(key => key.slice(10,25));
-            _draw(SAMPLE_DATA, LABEL_DATA);
+            SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
+            _draw(SAMPLE_DATA);
         });
     }
 }
-
+function createBetterJson(inlabels,indata){
+    var returnObject={
+        labels: [],
+        data: []
+    };
+    inlabels.forEach(function () {
+        returnObject.labels = inlabels ;
+        returnObject.data = indata;
+    })
+    return returnObject;
+}
 function run () {
     worker.postMessage({
         type: 'RUN',
@@ -136,10 +171,10 @@ function run () {
 
 function drawUpdate (embedding) {
     var xScale = d3.scaleLinear()
-        .domain([0, d3.max(embedding, function(d) { return d[0]; })])
+        .domain([d3.min(embedding, function(d) { return d[0]; })-0.05, d3.max(embedding, function(d) { return d[0]; })+0.05])
         .range([0, 600]);
     var yScale = d3.scaleLinear()
-        .domain([0,d3.max(embedding, function(d) { return d[1]; })])
+        .domain([d3.min(embedding, function(d) { return d[1]; })-0.05,d3.max(embedding, function(d) { return d[1]; })+0.05])
         .range([0, 900]);
 
     svg.selectAll("circle")

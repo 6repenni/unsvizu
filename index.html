@@ -1,158 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-
+    <title>t-SNE.js</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
+<body onLoad="init()">
 
-<style>
-    svg {
-        border: 1px solid #333;
-        margin-top: 20px;
-    }
-
-</style>
-
-</head>
-
-<body>
-<button onclick="console.log(Y)">Noadjf</button>
-<!--<div style="width:800px; margin-left:auto; margin-right:auto; text-align:center; font-family: arial;">-->
-
-    <div id="embed"></div>
-    <div id="cost" style="text-align:left; font-family: Impact;"></div>
-
-    <br>
-    <a href="index.html">Back to tsnejs.</a>
-
+<div class="container">
+    <div class="title"><span data-sr="enter top over 2s and move 30px">t-SNE.js </span><span class="github" data-sr="enter top over 2s and move 30px">[<a href="https://github.com/scienceai/tsne-js">github</a>]</span><br><span class="subtitle" data-sr="enter bottom over 2s and move 10px">example with MNIST (raw data)</span></div>
+    <div class="panel">
+        <div id="control-panel" data-sr="enter left over 8s">
+            <div class="param">
+                <label for="param-nsamples"># Samples</label>
+                <select id="param-nsamples" name="param-nsamples">
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                    <option value="400" selected>400</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                    <option value="1000">1000</option>
+                </select>
+                <output for="param-nsamples" id="param-nsamples-value"></output>
+            </div>
+            <div class="param">
+                <label for="param-perplexity">Perplexity</label>
+                <input id="param-perplexity" type="range" min="5" max="50" value="15", step="1">
+                <output for="param-perplexity" id="param-perplexity-value">15</output>
+            </div>
+            <div class="param">
+                <label for="param-earlyexag">Early Exaggeration</label>
+                <input id="param-earlyexag" type="range" min="1.1" max="10.0" value="2.1", step="0.1">
+                <output for="param-earlyexag" id="param-earlyexag-value">2.1</output>
+            </div>
+            <div class="param">
+                <label for="param-learningrate">Learning Rate</label>
+                <input id="param-learningrate" type="range" min="1" max="1000" value="180", step="1">
+                <output for="param-learningrate" id="param-learningrate-value">180</output>
+            </div>
+            <div class="param">
+                <label for="param-maxiter">Max Iterations</label>
+                <input id="param-maxiter" type="range" min="100" max="500" value="150", step="10">
+                <output for="param-maxiter" id="param-maxiter-value">150</output>
+            </div>
+            <div class="param">
+                <label for="param-distance">Distance Metric</label>
+                <select id="param-distance" name="param-distance">
+                    <option value="euclidean" selected>Euclidean distance</option>
+                    <option value="manhattan">Manhattan distance</option>
+                    <option value="jaccard">Jaccard dissimilarity</option>
+                    <option value="dice">Dice dissimilarity</option>
+                </select>
+                <output for="param-distance" id="param-distance-value"></output>
+            </div>
+            <div id="run-button">Run</div>
+            <div id="progress">
+                <div><span id="progress-status">Click Run button to begin</span></div>
+                <div>Iteration: <span id="progress-iter"></span></div>
+                <div>Error: <span id="progress-error"></span></div>
+                <div>Gradient vector norm: <span id="progress-gradnorm"></span></div>
+            </div>
+        </div>
+        <div id="embedding-space" data-sr="fade in over 5s"></div>
+    </div>
+</div>
+<div class="footer">t-sne by [<a href="https://github.com/scienceai/" target="_blank">science.ai</a>]
 </div>
 
-<script src="./node_modules/jquery/dist/jquery.js"></script>
-<script src="./node_modules/d3/dist/d3.min.js"></script>
-<script>
-    var labels = [], dataset = [];
-
-    $(window).on("load", function(){
-        var jsonData;
-        $.getJSON("ivector.json", function( j ) {
-            console.log(j);
-            jsonData = j.vectors;
-            console.log(jsonData);
-            dataset = _.values(jsonData);
-            labels = _.keys(jsonData);
-        });
-    });
-
-</script>
-<script src="js/service/tsne.js"></script>
+<!----------- SCRIPTS ------------>
+<script src="node_modules/d3/dist/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="node_modules/tsne-js/build/tsne.min.js"></script>
 <script src="node_modules/lodash/lodash.min.js"></script>
-<script src="js/d3Scatter.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-<script src="./js/service/data-service.js"></script>
+<script src="js/scatterMe.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js"></script>
+<script>
+    (function() {
+        window.sr= new scrollReveal({
+            reset: true,
+            mobile: true,
+            vFactor: 0.2
+        });
+    })();
+</script>
 </body>
 </html>
-
-<!--<!doctype html>
-<script src="jquery-1.8.3.min.js"></script>
-<script src="d3.min.js"></script>
-<script src="tsne.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-<script>
-
-    var opt = {epsilon: 10, perplexity: 30};
-    var T = new tsnejs.tSNE(opt); // create a tSNE instance
-
-    var Y;
-
-    var data;
-
-    function updateEmbedding() {
-        var Y = T.getSolution();
-        svg.selectAll('.u')
-            .data(data.words)
-            .attr("transform", function(d, i) { return "translate(" +
-                ((Y[i][0]*20*ss + tx) + 400) + "," +
-                ((Y[i][1]*20*ss + ty) + 400) + ")"; });
-    }
-
-    var svg;
-    function drawEmbedding() {
-        $("#embed").empty();
-        var div = d3.select("#embed");
-
-        // get min and max in each column of Y
-        var Y = T.Y;
-
-        svg = div.append("svg") // svg is global
-            .attr("width", 800)
-            .attr("height", 800);
-
-        var g = svg.selectAll(".b")
-            .data(data.words)
-            .enter().append("g")
-            .attr("class", "u");
-
-        g.append("text")
-            .attr("text-anchor", "top")
-            .attr("font-size", 12)
-            .attr("fill", "#333")
-            .text(function(d) { return d; });
-
-        var zoomListener = d3.behavior.zoom()
-            .scaleExtent([0.1, 10])
-            .center([0,0])
-            .on("zoom", zoomHandler);
-        zoomListener(svg);
-    }
-
-    var tx=0, ty=0;
-    var ss=1;
-    function zoomHandler() {
-        tx = d3.event.translate[0];
-        ty = d3.event.translate[1];
-        ss = d3.event.scale;
-    }
-
-    var stepnum = 0;
-    function step() {
-        var cost = T.step(); // do a few steps
-        $("#cost").html("iteration " + T.iter + ", cost: " + cost);
-        updateEmbedding();
-    }
-
-    $(window).load(function() {
-
-        $.getJSON( "wordvecs50dtop1000.json", function( j ) {
-            data = j;
-            T.initDataRaw(data.vecs); // init embedding
-            drawEmbedding(); // draw initial embedding
-
-            //T.debugGrad();
-            setInterval(step, 0);
-            //step();
-
-        });
-    });
-
-</script>
-
-</head>
-
-<body>
-
-<div style="width:800px; margin-left:auto; margin-right:auto; text-align:center; font-family: arial;">
-    <div>t-SNE running on <a href="http://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes">50-dimensional word vectors</a>. Uses <a href="https://github.com/karpathy/tsnejs">tsnejs</a> library.</div>
-    <div id="embed"></div>
-    <div id="cost" style="text-align:left; font-family: Impact;"></div>
-
-    <br>
-    <a href="index.html">Back to tsnejs.</a>
-
-</div>
-
-</body>
-
-</html>-->

@@ -5,6 +5,8 @@ var N_SAMPLES;
 var SAMPLE_DATA;
 var LABEL_DATA;
 var svg;
+var sampleLabels;
+var sampleColors;
 
 function init () {
     worker = new Worker('js/tsneExample.js');
@@ -55,7 +57,8 @@ function draw (num) {
     function _draw(samples) {
 
         var sampleData = samples.data.slice(0, num);
-        var sampleLabels = samples.labels.slice(0, num);
+        sampleLabels = samples.labels.slice(0, num);
+        sampleColors = samples.color.slice(0, num);
 
         worker.postMessage({
             type: 'INPUT_DATA',
@@ -84,7 +87,7 @@ function draw (num) {
             .attr("cy", function(d) {
                 return yScale(d[1]);
             })
-            .attr("r", 5)
+            .attr("r", 5);
             /*.append("title")
             .text(function (d) {
                 return d;
@@ -107,8 +110,32 @@ function draw (num) {
                 //Remove the tooltip
                 d3.select("#tooltip").remove();
             })*/
-            .on("click", function (d) {
-                console.log(d)
+        svg.selectAll("circle")
+            .data(sampleColors)
+            .attr("fill", function (d) {
+                return d3.rgb("#" + d);
+            })
+            svg.selectAll("circle")
+                .data(sampleLabels)
+                .on("mouseover", function(d){
+                var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
+                var yPosition = parseFloat(d3.select(this).attr("cy")) + 14;
+                svg.append("text")
+                    .attr("id", "tooltip")
+                    .attr("x", xPosition)
+                    .attr("y", yPosition)
+                    .attr("text-anchor", "middle")
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "11px")
+                    .attr("font-weight", "bold")
+                    .attr("fill", "black")
+                    .text(d);
+            })
+            .on("mouseout", function() {
+                //Remove the tooltip
+                d3.select("#tooltip").remove();
+            }).on("click", function (sampleLabels) {
+                console.log(sampleLabels)
             })
         /*$('#embedding-space').empty();
         var embeddingSpace = document.getElementById('embedding-space');
@@ -141,18 +168,48 @@ function draw (num) {
         })
         $.getJSON('ivector.json', function (samples) {
             SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
+            LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
             _draw(SAMPLE_DATA);
         });
     }
 }
+function hashCode(str) { // java String#hashCode
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return hash;
+}
+
+function intToRGB(i){
+    var c = (i & 0x00FFFFFF)
+        .toString(16)
+        .toUpperCase();
+
+    return "00000".substring(0, 6 - c.length) + c;
+}
+function createSplitJSON(inlabels,indata) {
+    var returnArray = [];
+    for(var i = 0; i < inlabels.length; i++){
+        returnArray.push({label:inlabels[i],data:indata[i]});
+    }
+    return returnArray;
+}
 function createBetterJson(inlabels,indata){
+    var splitLabel = inlabels.map(value => value.split("_"));
+    console.log(splitLabel);
     var returnObject={
+        id: [],
         labels: [],
-        data: []
+        timestamp: [],
+        data: [],
+        color:[]
     };
     inlabels.forEach(function () {
+
         returnObject.labels = inlabels ;
         returnObject.data = indata;
+        returnObject.color = splitLabel.map(value => hashCode(value[1])).map(value => intToRGB(value));
     })
     return returnObject;
 }
@@ -188,6 +245,31 @@ function drawUpdate (embedding) {
         })
         .attr("r", 5);
 
+    svg.selectAll("circle")
+        .data(sampleLabels)
+        .on("click", function (sampleLabels) {
+            console.log(sampleLabels)
+        })
+    svg.selectAll("circle")
+        .data(sampleLabels)
+        .on("mouseover", function(d){
+            var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
+            var yPosition = parseFloat(d3.select(this).attr("cy")) + 14;
+            svg.append("text")
+                .attr("id", "tooltip")
+                .attr("x", xPosition)
+                .attr("y", yPosition)
+                .attr("text-anchor", "middle")
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "11px")
+                .attr("font-weight", "bold")
+                .attr("fill", "black")
+                .text(d);
+        })
+        .on("mouseout", function() {
+            //Remove the tooltip
+            d3.select("#tooltip").remove();
+        })
     /*var embeddingSpace = document.getElementById('embedding-space');
 
 
@@ -199,6 +281,7 @@ function drawUpdate (embedding) {
         c.style.transform = `translateX(${(embedding[n][0] + 1) * embeddingSpaceWidth / 2 - 14}px) translateY(${(embedding[n][1] + 1) * embeddingSpaceHeight / 2 - 14}px)`;
     }*/
 }
+
 
 // form controls
 $('#param-nsamples').change(function () {

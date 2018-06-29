@@ -57,7 +57,7 @@ function draw (num) {
     function _draw(samples) {
 
         var sampleData = samples.data.slice(0, num);
-        sampleLabels = samples.labels.slice(0, num);
+        sampleLabels = samples.name.slice(0, num);
         sampleColors = samples.color.slice(0, num);
 
         worker.postMessage({
@@ -134,7 +134,8 @@ function draw (num) {
             .on("mouseout", function() {
                 //Remove the tooltip
                 d3.select("#tooltip").remove();
-            }).on("click", function (sampleLabels) {
+            })
+            .on("click", function (sampleLabels) {
                 console.log(sampleLabels)
             })
         /*$('#embedding-space').empty();
@@ -200,16 +201,19 @@ function createBetterJson(inlabels,indata){
     console.log(splitLabel);
     var returnObject={
         id: [],
+        name: [],
         labels: [],
         timestamp: [],
         data: [],
         color:[]
     };
     inlabels.forEach(function () {
-
         returnObject.labels = inlabels ;
         returnObject.data = indata;
         returnObject.color = splitLabel.map(value => hashCode(value[1])).map(value => intToRGB(value));
+        returnObject.id = splitLabel.map(value => value[0]);
+        returnObject.name = splitLabel.map(value => value[1]);
+        returnObject.timestamp = splitLabel.map(value => value[2]);
     })
     return returnObject;
 }

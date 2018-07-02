@@ -15,8 +15,6 @@ function init () {
         .append("svg")
         .attr('preserveAspectRatio', 'xMidYMid meet')
         .attr('viewBox', '0 0 ' + 600 + ' ' + 900);
-        /*.attr("width", 600)
-        .attr("height", 900);*/
 
     worker.onmessage = function (e) {
         var msg = e.data;
@@ -231,6 +229,7 @@ function run () {
 }
 
 function drawUpdate (embedding) {
+    embedding = embedding.slice(0, N_SAMPLES);
     var xScale = d3.scaleLinear()
         .domain([d3.min(embedding, function(d) { return d[0]; })-0.05, d3.max(embedding, function(d) { return d[0]; })+0.05])
         .range([0, 600]);

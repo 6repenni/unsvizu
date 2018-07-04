@@ -1,20 +1,24 @@
 'use strict';
 
-var worker;
-var N_SAMPLES;
-var SAMPLE_DATA;
-var LABEL_DATA;
-var svg;
-var sampleLabels;
-var sampleColors;
+let worker;
+let N_SAMPLES;
+let SAMPLE_DATA;
+let LABEL_DATA;
+let svg;
+let sampleNames;
+let sampleColors;
+let sampleLabels;
+let lblz;
 
 function init () {
     worker = new Worker('js/tsneExample.js');
-
     svg = d3.select("#embedding-space")
         .append("svg")
-        .attr('preserveAspectRatio', 'xMidYMid meet')
-        .attr('viewBox', '0 0 ' + 600 + ' ' + 900);
+        .attr("width", 600)
+        .attr("height", 900);
+
+        /*.attr('preserveAspectRatio', 'xMidYMid meet')
+        .attr('viewBox', '0 0 ' + 600 + ' ' + 900);*/
 
     worker.onmessage = function (e) {
         var msg = e.data;
@@ -49,23 +53,31 @@ function init () {
     draw(N_SAMPLES);
 
 }
-
+function sliceSamples(sampledata){
+    for (var property in sampledata) {
+        if (sampledata.hasOwnProperty(property)) {
+            sampledata.property
+        }
+    }
+}
 function draw (num) {
 
     function _draw(samples) {
-
+        $('svg').empty();
         var sampleData = samples.data.slice(0, num);
-        sampleLabels = samples.name.slice(0, num);
+        sampleNames = samples.name.slice(0, num);
         sampleColors = samples.color.slice(0, num);
+        sampleLabels = samples.labels.slice(0, num);
+
+        /*var sampleData = samples.slice(0,num);*/
 
         worker.postMessage({
             type: 'INPUT_DATA',
-            data: sampleData
+            data: samples.data.slice(0,num)
         });
-
-        var embeddingSpace = document.getElementById('embedding-space');
+       /* var embeddingSpace = document.getElementById('embedding-space');
         var randWidth = Math.random() * embeddingSpace.clientWidth - 14;
-        var randHeight = Math.random() * embeddingSpace.clientHeight - 14;
+        var randHeight = Math.random() * embeddingSpace.clientHeight - 14;*/
 
         var xScale = d3.scaleLinear()
             .domain([d3.min(sampleData, function(d) { return d[0]; })-0.05, d3.max(sampleData, function(d) { return d[0]; })+0.05])
@@ -74,8 +86,9 @@ function draw (num) {
             .domain([d3.min(sampleData, function(d) { return d[1]; })-0.05,d3.max(sampleData, function(d) { return d[1]; })+0.05])
             .range([0, 900]);
 
-        svg.selectAll("circle")
-            .data(sampleData)
+        svg
+            .selectAll("circle")
+            .data(samples.data.slice(0,num))
             .enter()
             .append("circle")
 
@@ -108,34 +121,87 @@ function draw (num) {
                 //Remove the tooltip
                 d3.select("#tooltip").remove();
             })*/
+
+
         svg.selectAll("circle")
             .data(sampleColors)
             .attr("fill", function (d) {
                 return d3.rgb("#" + d);
             })
-            svg.selectAll("circle")
-                .data(sampleLabels)
-                .on("mouseover", function(d){
-                var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
-                var yPosition = parseFloat(d3.select(this).attr("cy")) + 14;
-                svg.append("text")
-                    .attr("id", "tooltip")
-                    .attr("x", xPosition)
-                    .attr("y", yPosition)
-                    .attr("text-anchor", "middle")
-                    .attr("font-family", "sans-serif")
-                    .attr("font-size", "11px")
-                    .attr("font-weight", "bold")
-                    .attr("fill", "black")
-                    .text(d);
+
+        svg.selectAll("circle")
+            .data(sampleLabels)
+            .on("click", function(d) {
+                if($('#tooltip').hasClass("hidden")){
+            //Get this bar's x/y values, then augment for the tooltip
+                let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
+                let yPosition = parseFloat(d3.select(this).attr("cy")) ;
+                let splittedLabel = d.split("_");
+                let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".wav";
+                let timeStampBegin = parseInt(splittedLabel[2].split("-")[1], 10);
+                let timeStampEnd = parseInt(splittedLabel[2].split("-")[2], 10);
+                let sound = new Howl({
+                    src: [fileSource],
+                    preload: true,
+                    sprite: {
+                        partPlay: [timeStampBegin,(timeStampEnd - timeStampBegin)]
+                    }
+                });
+
+                console.log(fileSource);
+            //Update the tooltip position and value
+                d3.select("#tooltip")
+                    /*.style("left", xPosition + "px")
+                    .style("top", yPosition + "px")*/
+                    .select("#value")
+                    .text(splittedLabel[1]);
+                d3.select("#tooltip")
+                    .select("#time")
+                    .text(splittedLabel[2]);
+                d3.select("#tooltip")
+                    .select("#audioplay")
+                    .on("click", function () {
+                        console.log("clicked" + timeStampBegin + " ende: " + timeStampEnd + "oaiuwefh: " + (timeStampEnd - timeStampBegin));
+                        sound.play('partPlay');
+                    })
+                    /*.attr("src", "audio/" + fileName + ".wav")
+                    .attr("type", "audio/wave")*/
+            //Show the tooltip
+                d3.select("#tooltip").classed("hidden", false);
+                    }
+                    else{
+                d3.select("#tooltip").classed("hidden", true);
+                }})
+            /*.on("mouseout", function() {
+            //Hide the tooltip
+            d3.select("#tooltip").classed("hidden", true);
+            });*/
+
+        /*svg.selectAll("circle")
+            .data(sampleLabels)
+            .on("click", function (d) {
+                console.log(d)
+            });*/
+
+            /*.on("mouseover", function(d){
+            var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
+            var yPosition = parseFloat(d3.select(this).attr("cy")) + 14;
+            svg.append("text")
+                .attr("id", "tooltip")
+                .attr("x", xPosition)
+                .attr("y", yPosition)
+                .attr("text-anchor", "middle")
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "11px")
+                .attr("font-weight", "bold")
+                .attr("fill", "black")
+                .text(d);
             })
             .on("mouseout", function() {
                 //Remove the tooltip
                 d3.select("#tooltip").remove();
-            })
-            .on("click", function (sampleLabels) {
-                console.log(sampleLabels)
-            })
+            })*/
+
         /*$('#embedding-space').empty();
         var embeddingSpace = document.getElementById('embedding-space');
         for (var n = 0; n < num; n++) {
@@ -162,10 +228,13 @@ function draw (num) {
     if (SAMPLE_DATA) {
         _draw(SAMPLE_DATA);
     } else {
-        d3.json("ivector.json", function(data){
-            console.log(data);
-        })
+        /*d3.json("ivector.json", function(data){
+            SAMPLE_DATA = createBetterJson(_.keys(data.vectors), _.values(data.vectors));
+            LABEL_DATA = createSplitJSON(_.keys(data.vectors), _.values(data.vectors));
+            _draw(SAMPLE_DATA);
+        })*/
         $.getJSON('ivector.json', function (samples) {
+           /* console.log(samples);*/
             SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
             LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
             _draw(SAMPLE_DATA);
@@ -196,7 +265,7 @@ function createSplitJSON(inlabels,indata) {
 }
 function createBetterJson(inlabels,indata){
     var splitLabel = inlabels.map(value => value.split("_"));
-    console.log(splitLabel);
+    //console.log(splitLabel);
     var returnObject={
         id: [],
         name: [],
@@ -250,11 +319,67 @@ function drawUpdate (embedding) {
 
     svg.selectAll("circle")
         .data(sampleLabels)
-        .on("click", function (sampleLabels) {
-            console.log(sampleLabels)
-        })
-    svg.selectAll("circle")
-        .data(sampleLabels)
+        .on("click", function(d) {
+            if($('#tooltip').hasClass("hidden")){
+                //Get this bar's x/y values, then augment for the tooltip
+                let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
+                let yPosition = parseFloat(d3.select(this).attr("cy")) ;
+                let splittedLabel = d.split("_");
+                let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".wav";
+                let timeStampBegin = parseInt(splittedLabel[2].split("-")[1], 10);
+                let timeStampEnd = parseInt(splittedLabel[2].split("-")[2], 10);
+                let sound = new Howl({
+                    src: [fileSource],
+                    preload: true,
+                    sprite: {
+                        partPlay: [timeStampBegin,(timeStampEnd - timeStampBegin)]
+                    }
+                });
+
+                console.log(fileSource);
+                //Update the tooltip position and value
+                d3.select("#tooltip")
+                /*.style("left", xPosition + "px")
+                .style("top", yPosition + "px")*/
+                    .select("#value")
+                    .text(splittedLabel[1]);
+                d3.select("#tooltip")
+                    .select("#time")
+                    .text(splittedLabel[2]);
+                d3.select("#tooltip")
+                    .select("#audioplay")
+                    .on("click", function () {
+                        console.log("clicked" + timeStampBegin + " ende: " + timeStampEnd + "oaiuwefh: " + (timeStampEnd - timeStampBegin));
+                        sound.play('partPlay');
+                    })
+                /*.attr("src", "audio/" + fileName + ".wav")
+                .attr("type", "audio/wave")*/
+                //Show the tooltip
+                d3.select("#tooltip").classed("hidden", false);
+            }
+            else{
+                d3.select("#tooltip").classed("hidden", true);
+            }})
+   /* svg.selectAll("circle")
+        .data(sampleNames)
+        .on("mouseover", function(d) {
+            //Get this bar's x/y values, then augment for the tooltip
+            var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
+            var yPosition = parseFloat(d3.select(this).attr("cy")) / 2;
+            //Update the tooltip position and value
+            d3.select("#tooltip")
+                .style("left", xPosition + "px")
+                .style("top", yPosition + "px")
+                .select("#value")
+                .text(d);
+            //Show the tooltip
+            d3.select("#tooltip").classed("hidden", false);
+        }).on("mouseout", function() {
+        //Hide the tooltip
+        d3.select("#tooltip").classed("hidden", true);
+    })*/
+    /*svg.selectAll("circle")
+        .data(sampleNames)
         .on("mouseover", function(d){
             var xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
             var yPosition = parseFloat(d3.select(this).attr("cy")) + 14;
@@ -272,7 +397,7 @@ function drawUpdate (embedding) {
         .on("mouseout", function() {
             //Remove the tooltip
             d3.select("#tooltip").remove();
-        })
+        })*/
     /*var embeddingSpace = document.getElementById('embedding-space');
 
 

@@ -15,6 +15,7 @@
     "http-server": "^0.11.1",
     "jquery": "^3.3.1",
     "lodash": "^4.17.10",
+    "ml-pca": "^2.1.0",
     "scrollreveal": "^3.4.0",
     "tsne-js": "^1.0.3"
   }

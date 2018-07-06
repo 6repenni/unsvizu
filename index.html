@@ -12,12 +12,13 @@
 <body onLoad="init()">
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://unspeech.net/preview">Unspeech Viz</a>
-    <!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
             <a class="nav-link" href="#">Sign out</a>
         </li>
-    </ul>-->
+    </ul>
+    <!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    -->
 </nav>
 
 <div class="container-fluid">
@@ -71,6 +72,12 @@
                     </a>
                 </h6>
                 <ul class="nav flex-column mb-2">
+                    <li id="tooltip" class="nav-item">
+                        <p><strong>Name: </strong><span id="value"></span></p>
+                        <p><strong>Time: </strong><span id="time">xy</span></p>
+                        <p><button id="audioplay">Play</button></p>
+                    </li>
+
                     <li class="nav-item">
                         <div class="param">
                             <label for="param-nsamples"># Samples</label>
@@ -89,29 +96,7 @@
                             <output for="param-nsamples" id="param-nsamples-value"></output>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file-text"></span>
-                            Last quarter
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file-text"></span>
-                            Social engagement
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file-text"></span>
-                            Year-end sale
-                        </a>
-                    </li>
-                    <li id="tooltip" class="nav-item">
-                        <p><strong>Name: </strong><span id="value"></span></p>
-                        <p><strong>Time: </strong><span id="time">xy</span></p>
-                        <p><button id="audioplay">Play</button></p>
-                    </li>
+
                 </ul>
                 <div class="nav-item" id="control-panel">
                     <!--<div id="run-button">RUN</div>-->

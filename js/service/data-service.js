@@ -1,9 +1,23 @@
-function loadData() {
+
+$('.myButton').click(function() {
+
     $.ajax({
-        url: "http://localhost:5000/list_avail_reps"})
-        .done(function( data ) {
-            if ( console && console.log ) {
-                console.log( "Sample of data:", data.slice( 0, 100 ) );
+
+        'url' : 'http://localhost:5000/list_avail_reps',
+
+        'type' : 'GET',
+
+        /*'data' : {
+            'paramater1' : 'value',
+            'parameter2' : 'another value'
+        },*/
+
+        'success' : function(data) {
+            console.log(data);
+
+            if (data == "success") {
+                alert('request sent!');
             }
-        });
-}
+        }
+    });
+});

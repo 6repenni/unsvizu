@@ -15,7 +15,11 @@ function init () {
     svg = d3.select("#embedding-space")
         .append("svg")
         .attr("width", 600)
-        .attr("height", 900);
+            .attr("height", 900)
+        .call(d3.zoom().on("zoom", function () {
+            svg.attr("transform", d3.event.transform)
+        }))
+        .append("g");
 
         /*.attr('preserveAspectRatio', 'xMidYMid meet')
         .attr('viewBox', '0 0 ' + 600 + ' ' + 900);*/
@@ -63,7 +67,7 @@ function sliceSamples(sampledata){
 function draw (num) {
 
     function _draw(samples) {
-        $('svg').empty();
+        $('g').empty();
         var sampleData = samples.data.slice(0, num);
         sampleNames = samples.name.slice(0, num);
         sampleColors = samples.color.slice(0, num);
@@ -138,8 +142,8 @@ function draw (num) {
                 let yPosition = parseFloat(d3.select(this).attr("cy")) ;
                 let splittedLabel = d.split("_");
                 let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".wav";
-                let timeStampBegin = parseInt(splittedLabel[2].split("-")[1], 10);
-                let timeStampEnd = parseInt(splittedLabel[2].split("-")[2], 10);
+                let timeStampBegin = (parseInt(splittedLabel[2].split("-")[1], 10))*10;
+                let timeStampEnd = (parseInt(splittedLabel[2].split("-")[2], 10))*10;
                 let sound = new Howl({
                     src: [fileSource],
                     preload: true,
@@ -148,7 +152,8 @@ function draw (num) {
                     }
                 });
 
-                console.log(fileSource);
+                console.log(timeStampBegin + timeStampEnd);
+                sound.play('partPlay');
             //Update the tooltip position and value
                 d3.select("#tooltip")
                     /*.style("left", xPosition + "px")
@@ -326,8 +331,8 @@ function drawUpdate (embedding) {
                 let yPosition = parseFloat(d3.select(this).attr("cy")) ;
                 let splittedLabel = d.split("_");
                 let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".wav";
-                let timeStampBegin = parseInt(splittedLabel[2].split("-")[1], 10);
-                let timeStampEnd = parseInt(splittedLabel[2].split("-")[2], 10);
+                let timeStampBegin = (parseInt(splittedLabel[2].split("-")[1], 10))*10;
+                let timeStampEnd = (parseInt(splittedLabel[2].split("-")[2], 10))*10;
                 let sound = new Howl({
                     src: [fileSource],
                     preload: true,
@@ -336,7 +341,8 @@ function drawUpdate (embedding) {
                     }
                 });
 
-                console.log(fileSource);
+                console.log(timeStampBegin,timeStampEnd);
+                sound.play('partPlay');
                 //Update the tooltip position and value
                 d3.select("#tooltip")
                 /*.style("left", xPosition + "px")

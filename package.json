@@ -18,5 +18,9 @@
     "ml-pca": "^2.1.0",
     "scrollreveal": "^3.4.0",
     "tsne-js": "^1.0.3"
+  },
+  "devDependencies": {
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
   }
 }

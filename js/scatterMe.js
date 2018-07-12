@@ -11,6 +11,7 @@ let sampleLabels;
 let lblz;
 
 function init () {
+    console.log(listRepos());
     worker = new Worker('js/tsneExample.js');
     svg = d3.select("#embedding-space")
         .append("svg")

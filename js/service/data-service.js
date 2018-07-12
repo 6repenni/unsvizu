@@ -1,9 +1,7 @@
-
-$('.myButton').click(function() {
-
+function listRepos(){
     $.ajax({
 
-        'url' : 'http://localhost:5000/list_avail_reps',
+        'url' : 'http://localhost:80/list_avail_reps',
 
         'type' : 'GET',
 
@@ -20,4 +18,4 @@ $('.myButton').click(function() {
             }
         }
     });
-});
+}

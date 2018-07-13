@@ -15,8 +15,9 @@ function init () {
     worker = new Worker('js/tsneExample.js');
     svg = d3.select("#embedding-space")
         .append("svg")
-        .attr("width", 600)
-            .attr("height", 900)
+        .attr("width", 960)
+        .attr("height", 900)
+        .call(responsivefy)
         .call(d3.zoom().on("zoom", function () {
             svg.attr("transform", d3.event.transform)
         }))
@@ -86,7 +87,7 @@ function draw (num) {
 
         var xScale = d3.scaleLinear()
             .domain([d3.min(sampleData, function(d) { return d[0]; })-0.05, d3.max(sampleData, function(d) { return d[0]; })+0.05])
-            .range([0, 600]);
+            .range([0, 960]);
         var yScale = d3.scaleLinear()
             .domain([d3.min(sampleData, function(d) { return d[1]; })-0.05,d3.max(sampleData, function(d) { return d[1]; })+0.05])
             .range([0, 900]);
@@ -169,6 +170,12 @@ function draw (num) {
                     .on("click", function () {
                         console.log("clicked" + timeStampBegin + " ende: " + timeStampEnd + "oaiuwefh: " + (timeStampEnd - timeStampBegin));
                         sound.play('partPlay');
+                    })
+                d3.select("#tooltip")
+                    .select("#audiostop")
+                    .on("click", function () {
+                        console.log("Clicked stop");
+                        sound.stop();
                     })
                     /*.attr("src", "audio/" + fileName + ".wav")
                     .attr("type", "audio/wave")*/
@@ -416,7 +423,32 @@ function drawUpdate (embedding) {
         c.style.transform = `translateX(${(embedding[n][0] + 1) * embeddingSpaceWidth / 2 - 14}px) translateY(${(embedding[n][1] + 1) * embeddingSpaceHeight / 2 - 14}px)`;
     }*/
 }
+function responsivefy(svg) {
+    // get container + svg aspect ratio
+    var container = d3.select(svg.node().parentNode),
+        width = parseInt(svg.style("width")),
+        height = parseInt(svg.style("height")),
+        aspect = width / height;
 
+    // add viewBox and preserveAspectRatio properties,
+    // and call resize so that svg resizes on inital page load
+    svg.attr("viewBox", "0 0 " + width + " " + height)
+        .attr("perserveAspectRatio", "xMinYMid")
+        .call(resize);
+
+    // to register multiple listeners for same event type,
+    // you need to add namespace, i.e., 'click.foo'
+    // necessary if you call invoke this function for multiple svgs
+    // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+    d3.select(window).on("resize." + container.attr("id"), resize);
+
+    // get width of container and resize svg to fit it
+    function resize() {
+        var targetWidth = parseInt(container.style("width"));
+        svg.attr("width", targetWidth);
+        svg.attr("height", Math.round(targetWidth / aspect));
+    }
+}
 
 // form controls
 $('#param-nsamples').change(function () {

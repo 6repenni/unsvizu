@@ -116,14 +116,18 @@
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
                         <button id="run-button"  class="btn btn-sm btn-outline-secondary">RUN</button>
-                        <!--<button class="btn btn-sm btn-outline-secondary">Export</button>-->
+                        <button id="stop-button" class="btn btn-sm btn-outline-secondary">STOP</button>
                     </div>
-                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="collapse" href="#datasetCollapse"  aria-expanded="false" aria-controls="datasetCollapse">
                         Dataset
                     </button>
                 </div>
             </div>
-
+            <div class="collapse" id="datasetCollapse">
+                <div class="card card-body" id="datasetBody">
+                    <!--Hier kommen Daten aus data-service.js/listRepos()-->
+                </div>
+            </div>
             <div id="embedding-space" class="align-items-center"></div>
             <!--<canvas class="my-4" id="myChart" width="900" height="380"></canvas>-->
 

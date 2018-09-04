@@ -13,8 +13,10 @@ function listRepos(){
         'success' : function(data) {
             console.log(data);
 
-            if (data == "success") {
-                alert('request sent!');
+            if (data.status == "success") {
+                for(d of data.avail_reps){
+                    $("#datasetBody").append(d + "<br/>");
+                }
             }
         }
     });

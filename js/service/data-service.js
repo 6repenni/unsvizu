@@ -21,3 +21,23 @@ function listRepos(){
         }
     });
 }
+
+function getVectors(featFile){
+    $.ajax({
+
+        'url' : 'http://localhost:80/get_vectors',
+
+        'type' : 'POST',
+        data : {
+            feat_file: featFile
+        },
+        'success' : function(data) {
+            console.log(data);
+
+            if (data.status == "success") {
+                console.log(data.vectors);
+                return data.vectors;
+            }
+        }
+    });
+}

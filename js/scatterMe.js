@@ -9,6 +9,7 @@ let sampleNames;
 let sampleColors;
 let sampleLabels;
 let lblz;
+let currentRepo;
 function createWorker(){
     if(typeof(Worker) !== "undefined") {
         if (typeof (worker) == "undefined") {
@@ -188,13 +189,26 @@ function draw (num) {
     if (SAMPLE_DATA) {
         _draw(SAMPLE_DATA);
     } else {
-        $.getJSON('ivector.json', function (samples) {
-           /* console.log(samples);*/
-            SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
-            LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
-            _draw(SAMPLE_DATA);
-        });
+        if(currentRepo !== undefined){
+            $.getJSON(currentRepo, function (samples) {
+                /* console.log(samples);*/
+                SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
+                LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
+                _draw(SAMPLE_DATA);
+            });
+        }else{
+            $.getJSON('ivector.json', function (samples) {
+                /* console.log(samples);*/
+                SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
+                LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
+                _draw(SAMPLE_DATA);
+            });
+        }
     }
+}
+
+function loadData(availableRepo){
+
 }
 function hashCode(str) { // java String#hashCode
     let hash = 0;
@@ -396,12 +410,15 @@ function responsivefy(svg) {
         svg.attr("height", Math.round(targetWidth / aspect));
     }
 }
+//TODO: IF selection changes, call draw with new selection and N_SAMPLES
+
 
 // form controls
 $('#param-nsamples').change(function () {
     N_SAMPLES = parseInt($('#param-nsamples').val(), 10);
     draw(N_SAMPLES);
 });
+
 $('#param-perplexity').bind('input', function () { $('#param-perplexity-value').text($('#param-perplexity').val()); });
 $('#param-earlyexag').bind('input', function () { $('#param-earlyexag-value').text($('#param-earlyexag').val()); });
 $('#param-learningrate').bind('input', function () { $('#param-learningrate-value').text($('#param-learningrate').val()); });

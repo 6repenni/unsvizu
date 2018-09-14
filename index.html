@@ -116,7 +116,7 @@
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
                         <button id="run-button"  class="btn btn-sm btn-outline-secondary">RUN</button>
-                        <button id="stop-button" class="btn btn-sm btn-outline-secondary">STOP</button>
+                        <button id="stop-button" onclick="stop()" class="btn btn-sm btn-outline-secondary">STOP</button>
                     </div>
                     <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="collapse" href="#datasetCollapse"  aria-expanded="false" aria-controls="datasetCollapse">
                         Dataset
@@ -138,6 +138,7 @@
 
 
 <!----------- SCRIPTS ------------>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/service/data-service.js"></script>
 <script src="node_modules/d3/dist/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>

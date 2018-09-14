@@ -9,13 +9,30 @@ let sampleNames;
 let sampleColors;
 let sampleLabels;
 let lblz;
-let currentRepo;
+
 function createWorker(){
     if(typeof(Worker) !== "undefined") {
         if (typeof (worker) == "undefined") {
             worker = new Worker('js/tsneExample.js');
         }
     }
+}
+function setCurrentRepo(repo){
+    getVectors(repo);
+    //var currentRepo = getVectors(repo);
+    //console.log("inside setCurrent Repo. Value of currentRepo:\n" + currentRepo);
+    /*setTimeout(function () {
+        SAMPLE_DATA = createBetterJson(_.keys(currentRepo.vectors), _.values(currentRepo.vectors));
+        LABEL_DATA = createSplitJSON(_.keys(currentRepo.vectors), _.values(currentRepo.vectors));
+        draw(N_SAMPLES);
+    }, 5000);*/
+}
+function redraw(retData){
+    console.log("inside redraw");
+    console.log(retData);
+    SAMPLE_DATA = createBetterJson(_.keys(retData.data.vectors), _.values(retData.data.vectors));
+    LABEL_DATA = createSplitJSON(_.keys(retData.data.vectors), _.values(retData.data.vectors));
+    draw(N_SAMPLES);
 }
 let tooltip = d3.select("body")
     .append("div")
@@ -44,7 +61,6 @@ function init () {
 
         worker.onmessage = function (e) {
             let msg = e.data;
-
             switch (msg.type) {
                 case 'PROGRESS_STATUS':
                     $('#progress-status').text(msg.data);
@@ -189,27 +205,28 @@ function draw (num) {
     if (SAMPLE_DATA) {
         _draw(SAMPLE_DATA);
     } else {
-        if(currentRepo !== undefined){
-            $.getJSON(currentRepo, function (samples) {
-                /* console.log(samples);*/
-                SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
-                LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
-                _draw(SAMPLE_DATA);
-            });
-        }else{
-            $.getJSON('ivector.json', function (samples) {
-                /* console.log(samples);*/
-                SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
-                LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
-                _draw(SAMPLE_DATA);
-            });
-        }
+        $.getJSON('ivector.json', function (samples) {
+            /* console.log(samples);*/
+            SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
+            LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
+            _draw(SAMPLE_DATA);
+        });
     }
 }
 
 function loadData(availableRepo){
-
+    if(availableRepo !== undefined){
+        $.getJSON(availableRepo, function (samples) {
+            /* console.log(samples);*/
+            SAMPLE_DATA = createBetterJson(_.keys(samples.vectors), _.values(samples.vectors));
+            LABEL_DATA = createSplitJSON(_.keys(samples.vectors), _.values(samples.vectors));
+            _draw(SAMPLE_DATA);
+        });
+    }else{
+        console.log("availableRepo is undefined")
+    }
 }
+
 function hashCode(str) { // java String#hashCode
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
@@ -254,9 +271,7 @@ function createBetterJson(inlabels,indata){
     return returnObject;
 }
 function stop(){
-    worker.close();
-    //worker = undefined;
-    createWorker();
+    console.log(getVectors("./feats/unspeech_phn_32_stride1/dev/ivector_online.ark"));
 }
 function run () {
     worker.postMessage({
@@ -335,54 +350,6 @@ function drawUpdate (embedding) {
             else{
                 d3.select("#tooltip").classed("hidden", true);
             }})
-   /* svg.selectAll("circle")
-        .data(sampleNames)
-        .on("mouseover", function(d) {
-            //Get this bar's x/y values, then augment for the tooltip
-            let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
-            let yPosition = parseFloat(d3.select(this).attr("cy")) / 2;
-            //Update the tooltip position and value
-            d3.select("#tooltip")
-                .style("left", xPosition + "px")
-                .style("top", yPosition + "px")
-                .select("#value")
-                .text(d);
-            //Show the tooltip
-            d3.select("#tooltip").classed("hidden", false);
-        }).on("mouseout", function() {
-        //Hide the tooltip
-        d3.select("#tooltip").classed("hidden", true);
-    })*/
-    /*svg.selectAll("circle")
-        .data(sampleNames)
-        .on("mouseover", function(d){
-            let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
-            let yPosition = parseFloat(d3.select(this).attr("cy")) + 14;
-            svg.append("text")
-                .attr("id", "tooltip")
-                .attr("x", xPosition)
-                .attr("y", yPosition)
-                .attr("text-anchor", "middle")
-                .attr("font-family", "sans-serif")
-                .attr("font-size", "11px")
-                .attr("font-weight", "bold")
-                .attr("fill", "black")
-                .text(d);
-        })
-        .on("mouseout", function() {
-            //Remove the tooltip
-            d3.select("#tooltip").remove();
-        })*/
-    /*let embeddingSpace = document.getElementById('embedding-space');
-
-
-    let embeddingSpace = document.getElementById('embedding-space');
-    let embeddingSpaceWidth = embeddingSpace.clientWidth;
-    let embeddingSpaceHeight = embeddingSpace.clientHeight;
-    for (let n = 0; n < N_SAMPLES; n++) {
-        let c = document.getElementById(`sample-${n}`);
-        c.style.transform = `translateX(${(embedding[n][0] + 1) * embeddingSpaceWidth / 2 - 14}px) translateY(${(embedding[n][1] + 1) * embeddingSpaceHeight / 2 - 14}px)`;
-    }*/
 }
 function responsivefy(svg) {
     // get container + svg aspect ratio

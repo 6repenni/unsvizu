@@ -51,30 +51,4 @@ function getVectors(featFile){
         url: vectorUrl,
         data : bodyFormData
     }).then(data => {redraw(data)});
-
-    /*const oParam = {
-        Body:{
-            feat_file: featFile
-        },
-        method: "POST"
-    };
-    fetch(vectorUrl,oParam)
-        .then(data =>{return data.json()})
-        .then(res => {console.log(res)})
-        .then(error => {console.log(error)});
-*/
-
-   /* $.ajax({
-
-        'url' : 'http://localhost:80/get_vectors',
-
-        'type' : 'POST',
-        data : {
-            feat_file: featFile
-        },
-        'success' : function(data) {
-            tmpData = data;
-        }
-    }).then(data => data.json())
-        .then(json => console.log(json));*/
 }

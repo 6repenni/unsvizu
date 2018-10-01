@@ -19,14 +19,8 @@ function createWorker(){
 }
 function setCurrentRepo(repo){
     getVectors(repo);
-    //var currentRepo = getVectors(repo);
-    //console.log("inside setCurrent Repo. Value of currentRepo:\n" + currentRepo);
-    /*setTimeout(function () {
-        SAMPLE_DATA = createBetterJson(_.keys(currentRepo.vectors), _.values(currentRepo.vectors));
-        LABEL_DATA = createSplitJSON(_.keys(currentRepo.vectors), _.values(currentRepo.vectors));
-        draw(N_SAMPLES);
-    }, 5000);*/
 }
+
 function redraw(retData){
     console.log("inside redraw");
     console.log(retData);
@@ -34,6 +28,7 @@ function redraw(retData){
     LABEL_DATA = createSplitJSON(_.keys(retData.data.vectors), _.values(retData.data.vectors));
     draw(N_SAMPLES);
 }
+
 let tooltip = d3.select("body")
     .append("div")
     .attr("class", "mouse-tooltip")
@@ -51,14 +46,12 @@ function init () {
             .attr("width", 960)
             .attr("height", 900)
             .call(responsivefy)
-            .call(d3.zoom().on("zoom", function () {
+            /*.call(d3.zoom().on("zoom", function () {
                 svg.attr("transform", d3.event.transform)
-            }))
+            }))*/
             .append("g");
-
         /*.attr('preserveAspectRatio', 'xMidYMid meet')
         .attr('viewBox', '0 0 ' + 600 + ' ' + 900);*/
-
         worker.onmessage = function (e) {
             let msg = e.data;
             switch (msg.type) {
@@ -90,9 +83,8 @@ function init () {
                 default:
             }
         }
-
-        N_SAMPLES = parseInt($('#param-nsamples').val(), 10);
-        draw(N_SAMPLES);
+    N_SAMPLES = parseInt($('#param-nsamples').val(), 10);
+    draw(N_SAMPLES);
 }
 function sliceSamples(sampledata){
     for (let property in sampledata) {
@@ -145,14 +137,16 @@ function draw (num) {
         //Mouseover Tooltip
         svg.selectAll("circle")
             .data(sampleNames)
-            .on("mouseover", function(d){return tooltip.style("visibility", "visible").text(d);})
+            .on("mouseover", function(d){d3.select(this).attr('r', 10); return tooltip.style("visibility", "visible").text(d);})
             .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
-            .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+            .on("mouseout", function(){d3.select(this).attr('r', 5); return tooltip.style("visibility", "hidden");});
 
         // On Click Tooltip (Left Menu)
         svg.selectAll("circle")
             .data(sampleLabels)
+            .style('stroke', 'none')
             .on("click", function(d) {
+                d3.selectAll("#tooltip").classed("hidden", true);
                 if($('#tooltip').hasClass("hidden")){
             //Get this bar's x/y values, then augment for the tooltip
                 let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
@@ -170,7 +164,7 @@ function draw (num) {
                 });
 
                 console.log(timeStampBegin + timeStampEnd);
-                sound.play('partPlay');
+                //sound.play('partPlay'); //AutoPlay
             //Update the tooltip position and value
                 d3.select("#tooltip")
                     /*.style("left", xPosition + "px")
@@ -192,11 +186,11 @@ function draw (num) {
                         console.log("Clicked stop");
                         sound.stop();
                     })
-                    /*.attr("src", "audio/" + fileName + ".wav")
-                    .attr("type", "audio/wave")*/
-            //Show the tooltip
+                    d3.select(this).style('stroke', 'black');
+
+                    //Show the tooltip
                 d3.select("#tooltip").classed("hidden", false);
-                    }
+                }
                     else{
                 d3.select("#tooltip").classed("hidden", true);
                 }})
@@ -342,8 +336,6 @@ function drawUpdate (embedding) {
                         console.log("clicked" + timeStampBegin + " ende: " + timeStampEnd + "oaiuwefh: " + (timeStampEnd - timeStampBegin));
                         sound.play('partPlay');
                     })
-                /*.attr("src", "audio/" + fileName + ".wav")
-                .attr("type", "audio/wave")*/
                 //Show the tooltip
                 d3.select("#tooltip").classed("hidden", false);
             }

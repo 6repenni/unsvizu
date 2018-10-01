@@ -36,75 +36,76 @@
 
 
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span>Settings</span>
+                    <ul class="nav flex-column mb-2">
+
+                        <li id="tooltip" class="nav-item">
+                            <p><strong>Name: </strong><span id="value"></span></p>
+                            <p><strong>Time: </strong><span id="time">xy</span></p>
+                            <p><button id="audioplay">Play</button></p>
+                            <p><button id="audiostop">Stop</button></p>
+                        </li></ul>
                     <a class="d-flex align-items-center text-muted" href="#">
-                        <span data-feather="plus-circle"></span>
+
                     </a>
                 </h6>
                 <ul class="nav flex-column mb-2">
-                    <li id="tooltip" class="nav-item">
-                        <p><strong>Name: </strong><span id="value"></span></p>
-                        <p><strong>Time: </strong><span id="time">xy</span></p>
-                        <p><button id="audioplay">Play</button></p>
-                        <p><button id="audiostop">Stop</button></p>
-                    </li>
+                    <button data-toggle="collapse" data-target="#demo">Settings <p data-feather="plus"></p></button>
+                    <div id="demo" class="collapse">
+                        <li class="nav-item">
+                            <div class="param">
+                                <label for="param-nsamples"># Samples</label>
+                                <select id="param-nsamples" name="param-nsamples">
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400" selected>400</option>
+                                    <option value="500">500</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                    <option value="1000">1000</option>
+                                </select>
+                                <output for="param-nsamples" id="param-nsamples-value"></output>
+                            </div>
+                        </li>
+                        <div class="nav-item" id="control-panel">
+                            <!--<div id="run-button">RUN</div>-->
 
-                    <li class="nav-item">
-                        <div class="param">
-                            <label for="param-nsamples"># Samples</label>
-                            <select id="param-nsamples" name="param-nsamples">
-                                <option value="100">100</option>
-                                <option value="200">200</option>
-                                <option value="300">300</option>
-                                <option value="400" selected>400</option>
-                                <option value="500">500</option>
-                                <option value="600">600</option>
-                                <option value="700">700</option>
-                                <option value="800">800</option>
-                                <option value="900">900</option>
-                                <option value="1000">1000</option>
-                            </select>
-                            <output for="param-nsamples" id="param-nsamples-value"></output>
+                            <div class="param">
+                                <label for="param-perplexity">Perplexity</label>
+                                <input id="param-perplexity" type="range" min="5" max="50" value="15", step="1">
+                                <output for="param-perplexity" id="param-perplexity-value">15</output>
+                            </div>
+                            <div class="param">
+                                <label for="param-earlyexag">Early Exaggeration</label>
+                                <input id="param-earlyexag" type="range" min="1.1" max="10.0" value="2.1", step="0.1">
+                                <output for="param-earlyexag" id="param-earlyexag-value">2.1</output>
+                            </div>
+                            <div class="param">
+                                <label for="param-learningrate">Learning Rate</label>
+                                <input id="param-learningrate" type="range" min="1" max="1000" value="180", step="1">
+                                <output for="param-learningrate" id="param-learningrate-value">180</output>
+                            </div>
+                            <div class="param">
+                                <label for="param-maxiter">Max Iterations</label>
+                                <input id="param-maxiter" type="range" min="100" max="500" value="150", step="10">
+                                <output for="param-maxiter" id="param-maxiter-value">150</output>
+                            </div>
+                            <div class="param">
+                                <label for="param-distance">Distance Metric</label>
+                                <select id="param-distance" name="param-distance">
+                                    <option value="euclidean" selected>Euclidean distance</option>
+                                    <option value="manhattan">Manhattan distance</option>
+                                    <option value="jaccard">Jaccard dissimilarity</option>
+                                    <option value="dice">Dice dissimilarity</option>
+                                </select>
+                                <output for="param-distance" id="param-distance-value"></output>
+                            </div>
+                            <span id="progress-status">Click Run button to begin</span>
                         </div>
-                    </li>
-
+                    </div><!--End div collapse-->
                 </ul>
-                <div class="nav-item" id="control-panel">
-                    <!--<div id="run-button">RUN</div>-->
-
-                    <div class="param">
-                        <label for="param-perplexity">Perplexity</label>
-                        <input id="param-perplexity" type="range" min="5" max="50" value="15", step="1">
-                        <output for="param-perplexity" id="param-perplexity-value">15</output>
-                    </div>
-                    <div class="param">
-                        <label for="param-earlyexag">Early Exaggeration</label>
-                        <input id="param-earlyexag" type="range" min="1.1" max="10.0" value="2.1", step="0.1">
-                        <output for="param-earlyexag" id="param-earlyexag-value">2.1</output>
-                    </div>
-                    <div class="param">
-                        <label for="param-learningrate">Learning Rate</label>
-                        <input id="param-learningrate" type="range" min="1" max="1000" value="180", step="1">
-                        <output for="param-learningrate" id="param-learningrate-value">180</output>
-                    </div>
-                    <div class="param">
-                        <label for="param-maxiter">Max Iterations</label>
-                        <input id="param-maxiter" type="range" min="100" max="500" value="150", step="10">
-                        <output for="param-maxiter" id="param-maxiter-value">150</output>
-                    </div>
-                    <div class="param">
-                        <label for="param-distance">Distance Metric</label>
-                        <select id="param-distance" name="param-distance">
-                            <option value="euclidean" selected>Euclidean distance</option>
-                            <option value="manhattan">Manhattan distance</option>
-                            <option value="jaccard">Jaccard dissimilarity</option>
-                            <option value="dice">Dice dissimilarity</option>
-                        </select>
-                        <output for="param-distance" id="param-distance-value"></output>
-                    </div>
-                    <span id="progress-status">Click Run button to begin</span>
-
-                </div>
                 <div class="nav-link">t-sne by [ <a href="https://github.com/scienceai/" target="_blank">science.ai</a> ]</div>
             </div>
 

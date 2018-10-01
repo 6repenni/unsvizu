@@ -1,0 +1,11 @@
+------ TODO ------
+TODO: Add better usability to tooltip bar (communicate if audio file is available/unavailable)
+TODO: Make sure load times are understood
+TODO: Add functionality to STOP button
+TODO: Make selection on data (settings/parameters)
+TODO: Show distance to other nodes -> save distance before t-sne
+TODO: Improve mouseover tooltip (design and info)
+TODO: selection to disable average_utts
+------ DONE ------
+TODO: Make Settings collapsible -> done
+TODO:

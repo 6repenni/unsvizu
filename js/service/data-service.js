@@ -21,7 +21,7 @@ function listRepos(){
                         console.log("get filtered son");
                     }else{
                         console.log(escape(d));
-                        $("#datasetBody").append("<a onclick=\"setCurrentRepo(&quot"+d+"&quot)\">" + d + "</a>" +"<br/>");
+                        $("#datasetBody").append("<a onclick=\"getVectors(&quot"+d+"&quot)\">" + d + "</a>" +"<br/>");
                     }
                 }
             }

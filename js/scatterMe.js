@@ -8,7 +8,7 @@ let svg;
 let sampleNames;
 let sampleColors;
 let sampleLabels;
-let lblz;
+
 
 function createWorker(){
     if(typeof(Worker) !== "undefined") {
@@ -17,10 +17,8 @@ function createWorker(){
         }
     }
 }
-function setCurrentRepo(repo){
-    getVectors(repo);
-}
 
+/*Gets triggered when a redraw is required because of new data set*/
 function redraw(retData){
     console.log("inside redraw");
     console.log(retData);
@@ -29,16 +27,17 @@ function redraw(retData){
     draw(N_SAMPLES);
 }
 
+/*initiate the tooltip to have easy mouseover later on*/
 let tooltip = d3.select("body")
     .append("div")
     .attr("class", "mouse-tooltip")
     .style("position", "absolute")
     .style("z-index", "10")
     .style("visibility", "hidden")
-    .text("a simple tooltip");
+    .text("Tooltip");
 
+/*creates canvas, initiates worker*/
 function init () {
-    /*console.log(listRepos());*/
         listRepos();
         createWorker();
         svg = d3.select("#embedding-space")
@@ -46,12 +45,8 @@ function init () {
             .attr("width", 960)
             .attr("height", 900)
             .call(responsivefy)
-            /*.call(d3.zoom().on("zoom", function () {
-                svg.attr("transform", d3.event.transform)
-            }))*/
             .append("g");
-        /*.attr('preserveAspectRatio', 'xMidYMid meet')
-        .attr('viewBox', '0 0 ' + 600 + ' ' + 900);*/
+
         worker.onmessage = function (e) {
             let msg = e.data;
             switch (msg.type) {
@@ -86,6 +81,8 @@ function init () {
     N_SAMPLES = parseInt($('#param-nsamples').val(), 10);
     draw(N_SAMPLES);
 }
+
+
 function sliceSamples(sampledata){
     for (let property in sampledata) {
         if (sampledata.hasOwnProperty(property)) {
@@ -93,7 +90,10 @@ function sliceSamples(sampledata){
         }
     }
 }
+
+/*initially called draw function. holds all ui functions*/
 function draw (num) {
+    /*_draw is called when data is loaded successfully*/
     function _draw(samples) {
         $('g').empty();
         let sampleData = samples.data.slice(0, num);
@@ -148,11 +148,13 @@ function draw (num) {
             .on("click", function(d) {
                 d3.selectAll("#tooltip").classed("hidden", true);
                 if($('#tooltip').hasClass("hidden")){
-            //Get this bar's x/y values, then augment for the tooltip
+
+                //Get this bar's x/y values, then augment for the tooltip
                 let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
                 let yPosition = parseFloat(d3.select(this).attr("cy")) ;
+                //required because of the json format received from API
                 let splittedLabel = d.split("_");
-                let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".wav";
+                let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".mp3";
                 let timeStampBegin = (parseInt(splittedLabel[2].split("-")[1], 10))*10;
                 let timeStampEnd = (parseInt(splittedLabel[2].split("-")[2], 10))*10;
                 let sound = new Howl({
@@ -163,12 +165,12 @@ function draw (num) {
                     }
                 });
 
+                //debugging
                 console.log(timeStampBegin + timeStampEnd);
                 //sound.play('partPlay'); //AutoPlay
+
             //Update the tooltip position and value
                 d3.select("#tooltip")
-                    /*.style("left", xPosition + "px")
-                    .style("top", yPosition + "px")*/
                     .select("#value")
                     .text(splittedLabel[1]);
                 d3.select("#tooltip")
@@ -208,6 +210,7 @@ function draw (num) {
     }
 }
 
+/*get called from data-service.js when a new dataSet is loaded*/
 function loadData(availableRepo){
     if(availableRepo !== undefined){
         $.getJSON(availableRepo, function (samples) {
@@ -221,6 +224,7 @@ function loadData(availableRepo){
     }
 }
 
+/*hashing Speaker Names to color data points*/
 function hashCode(str) { // java String#hashCode
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
@@ -236,6 +240,7 @@ function intToRGB(i){
 
     return "00000".substring(0, 6 - c.length) + c;
 }
+/*required because of the form of data received from API*/
 function createSplitJSON(inlabels,indata) {
     let returnArray = [];
     for(let i = 0; i < inlabels.length; i++){
@@ -243,6 +248,7 @@ function createSplitJSON(inlabels,indata) {
     }
     return returnArray;
 }
+/*required because of the form of data received from API*/
 function createBetterJson(inlabels,indata){
     let splitLabel = inlabels.map(value => value.split("_"));
     //console.log(splitLabel);
@@ -264,6 +270,8 @@ function createBetterJson(inlabels,indata){
     })
     return returnObject;
 }
+
+/*stop. didn't work because webworker would despawn*/
 function stop(){
     console.log(getVectors("./feats/unspeech_phn_32_stride1/dev/ivector_online.ark"));
 }
@@ -280,6 +288,7 @@ function run () {
     });
 }
 
+/*required */
 function drawUpdate (embedding) {
     embedding = embedding.slice(0, N_SAMPLES);
     let xScale = d3.scaleLinear()
@@ -301,14 +310,26 @@ function drawUpdate (embedding) {
         .attr("r", 5);
 
     svg.selectAll("circle")
+        .data(sampleNames)
+        .on("mouseover", function(d){d3.select(this).attr('r', 10); return tooltip.style("visibility", "visible").text(d);})
+        .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+        .on("mouseout", function(){d3.select(this).attr('r', 5); return tooltip.style("visibility", "hidden");});
+
+
+    // On Click Tooltip (Left Menu)
+    svg.selectAll("circle")
         .data(sampleLabels)
+        .style('stroke', 'none')
         .on("click", function(d) {
+            d3.selectAll("#tooltip").classed("hidden", true);
             if($('#tooltip').hasClass("hidden")){
+
                 //Get this bar's x/y values, then augment for the tooltip
                 let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
                 let yPosition = parseFloat(d3.select(this).attr("cy")) ;
+                //required because of the json format received from API
                 let splittedLabel = d.split("_");
-                let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".wav";
+                let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".mp3";
                 let timeStampBegin = (parseInt(splittedLabel[2].split("-")[1], 10))*10;
                 let timeStampEnd = (parseInt(splittedLabel[2].split("-")[2], 10))*10;
                 let sound = new Howl({
@@ -319,12 +340,11 @@ function drawUpdate (embedding) {
                     }
                 });
 
-                console.log(timeStampBegin,timeStampEnd);
-                sound.play('partPlay');
+                //debugging
+                console.log(timeStampBegin + timeStampEnd);
+
                 //Update the tooltip position and value
                 d3.select("#tooltip")
-                /*.style("left", xPosition + "px")
-                .style("top", yPosition + "px")*/
                     .select("#value")
                     .text(splittedLabel[1]);
                 d3.select("#tooltip")
@@ -336,6 +356,14 @@ function drawUpdate (embedding) {
                         console.log("clicked" + timeStampBegin + " ende: " + timeStampEnd + "oaiuwefh: " + (timeStampEnd - timeStampBegin));
                         sound.play('partPlay');
                     })
+                d3.select("#tooltip")
+                    .select("#audiostop")
+                    .on("click", function () {
+                        console.log("Clicked stop");
+                        sound.stop();
+                    })
+                d3.select(this).style('stroke', 'black');
+
                 //Show the tooltip
                 d3.select("#tooltip").classed("hidden", false);
             }
@@ -343,6 +371,7 @@ function drawUpdate (embedding) {
                 d3.select("#tooltip").classed("hidden", true);
             }})
 }
+/*adds responsiveness to the d3js canvas*/
 function responsivefy(svg) {
     // get container + svg aspect ratio
     let container = d3.select(svg.node().parentNode),
@@ -356,10 +385,6 @@ function responsivefy(svg) {
         .attr("perserveAspectRatio", "xMinYMid")
         .call(resize);
 
-    // to register multiple listeners for same event type,
-    // you need to add namespace, i.e., 'click.foo'
-    // necessary if you call invoke this function for multiple svgs
-    // api docs: https://github.com/mbostock/d3/wiki/Selections#on
     d3.select(window).on("resize." + container.attr("id"), resize);
 
     // get width of container and resize svg to fit it
@@ -369,7 +394,6 @@ function responsivefy(svg) {
         svg.attr("height", Math.round(targetWidth / aspect));
     }
 }
-//TODO: IF selection changes, call draw with new selection and N_SAMPLES
 
 
 // form controls

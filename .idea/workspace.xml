@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="Get/POST for multiple datasets implemented&#10;Redraw works -&gt; Datasets can be selected and used&#10;F*ck POST">
-      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="Latest push">
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PCA.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/AimeeMullins_2009P.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/BillGates_2010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/DanBarber_2010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/DanielKahneman_2010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/EricMead_2009P.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/GaryFlake_2010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/JamesCameron_2010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/JaneMcGonigal_2010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/Kawai-K11-CleanGtr-C3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/MichaelSpecter_2010.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/RobertGupta_2010U.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/TomWujec_2010U.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexALT.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/scatterMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scatterMe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/service/data-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/service/data-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tester.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unspeechvizbootstrapped.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,31 +63,35 @@
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.7" value="8" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="84" />
-          <entry key="html" value="486" />
-          <entry key="js" value="3422" />
-          <entry key="txt" value="770" />
+          <entry key="MD" value="404" />
+          <entry key="css" value="96" />
+          <entry key="html" value="563" />
+          <entry key="js" value="4185" />
+          <entry key="txt" value="785" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="84" />
-          <entry key="HTML" value="486" />
-          <entry key="JavaScript" value="3422" />
-          <entry key="PLAIN_TEXT" value="770" />
+          <entry key="CSS" value="96" />
+          <entry key="HTML" value="563" />
+          <entry key="JavaScript" value="4185" />
+          <entry key="Markdown" value="404" />
+          <entry key="PLAIN_TEXT" value="785" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="MD" value="1" />
           <entry key="css" value="1" />
+          <entry key="html" value="1" />
           <entry key="js" value="2" />
           <entry key="txt" value="1" />
         </counts>
@@ -70,7 +99,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
           <entry key="JavaScript" value="2" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -81,17 +112,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
+            <state relative-caret-position="153">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.MD">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="306">
+                <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/scatterMe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="194" column="62" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
+            <state relative-caret-position="202">
+              <caret line="143" column="39" lean-forward="true" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -108,8 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
+            <state relative-caret-position="-7">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -117,7 +160,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/tsneExample.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="17">
               <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
@@ -126,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/service/data-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+            <state relative-caret-position="238">
+              <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -162,6 +205,8 @@
       <find>stop-button</find>
       <find>currentRepo</find>
       <find>zoo</find>
+      <find>setCurrentRepo</find>
+      <find>setC</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
@@ -180,11 +225,12 @@
         <option value="$PROJECT_DIR$/tester.html" />
         <option value="$PROJECT_DIR$/js/pca.js" />
         <option value="$PROJECT_DIR$/PCA.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/todo.txt" />
         <option value="$PROJECT_DIR$/js/service/data-service.js" />
         <option value="$PROJECT_DIR$/js/scatterMe.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/README.MD" />
       </list>
     </option>
   </component>
@@ -216,7 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,14 +275,14 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536928386680" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538510212557" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -319,7 +365,8 @@
       <workItem from="1537276874730" duration="2806000" />
       <workItem from="1537284268033" duration="1178000" />
       <workItem from="1537371734956" duration="602000" />
-      <workItem from="1538408056584" duration="611000" />
+      <workItem from="1538408056584" duration="2484000" />
+      <workItem from="1538471270623" duration="13679000" />
     </task>
     <task id="LOCAL-00001" summary="get that shit done">
       <created>1530215497198</created>
@@ -398,16 +445,24 @@
       <option name="project" value="LOCAL" />
       <updated>1536920270419</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Latest push">
+      <created>1538416217274</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1538416217274</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161300000" />
+    <option name="totallyTimeSpent" value="176852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1253" y="27" width="1252" height="1413" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23504983" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23920266" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -423,7 +478,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.589313" visible="true" weight="0.3426791" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.589313" visible="true" weight="0.3426791" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.41068703" side_tool="true" weight="0.3322091" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
@@ -487,7 +542,8 @@
     <MESSAGE value="Added Stop&#10;Added AJAX Request for Datasets" />
     <MESSAGE value="Get/POST for Data implemented&#10;Selection Menu for Dataset implemented" />
     <MESSAGE value="Get/POST for multiple datasets implemented&#10;Redraw works -&gt; Datasets can be selected and used&#10;F*ck POST" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get/POST for multiple datasets implemented&#10;Redraw works -&gt; Datasets can be selected and used&#10;F*ck POST" />
+    <MESSAGE value="Latest push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Latest push" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -498,13 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indexALT.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2367">
-          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -563,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -577,34 +619,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/tsneExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/service/data-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        <state relative-caret-position="238">
+          <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/indexALT.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tsneExample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/scatterMe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="194" column="62" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
+        <state relative-caret-position="202">
+          <caret line="143" column="39" lean-forward="true" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

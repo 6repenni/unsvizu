@@ -50,7 +50,7 @@
                     </a>
                 </h6>
                 <ul class="nav flex-column mb-2">
-                    <button class="btn btn-info" data-toggle="collapse" data-target="#demo" class="blue button">Settings <p data-feather="plus"></p></button>
+                    <button class="btn btn-outline-info" data-toggle="collapse" data-target="#demo">Settings <p data-feather="plus"></p></button>
                     <div id="demo" class="collapse">
                         <li class="nav-item">
                             <div class="param">
@@ -103,7 +103,7 @@
                                 </select>
                                 <output for="param-distance" id="param-distance-value"></output>
                             </div>
-                            <span id="progress-status">Click Run button to begin</span>
+
                         </div>
                     </div><!--End div collapse-->
                 </ul>
@@ -117,10 +117,10 @@
                 <h1 class="h2">T-SNE Visualization</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
-                        <button id="run-button"  class="btn btn-sm btn-outline-secondary">RUN</button>
-                        <button id="stop-button" onclick="stop()" class="btn btn-sm btn-outline-secondary">STOP</button>
+                        <button id="run-button"  class="btn btn-sm btn-success">RUN</button>
+                        <button id="stop-button" onclick="stop()" class="btn btn-sm btn-outline-danger">STOP</button>
                     </div>
-                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="collapse" href="#datasetCollapse"  aria-expanded="false" aria-controls="datasetCollapse">
+                    <button class="btn btn-sm btn-outline-info dropdown-toggle" data-toggle="collapse" href="#datasetCollapse"  aria-expanded="false" aria-controls="datasetCollapse">
                         Dataset
                     </button>
                 </div>

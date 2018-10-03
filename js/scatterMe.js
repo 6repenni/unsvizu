@@ -141,6 +141,23 @@ function draw (num) {
             .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
             .on("mouseout", function(){d3.select(this).attr('r', 5); return tooltip.style("visibility", "hidden");});
 
+        svg.selectAll("circle")
+            .data(sampleLabels)
+            .on( "click", function( d, i) {
+                var e = d3.event,
+                    g = this.parentNode,
+                    isSelected = d3.select( g).classed( "selected");
+
+                if( !e.ctrlKey) {
+                    d3.selectAll( 'g.selected').classed( "selected", false);
+                }
+
+                d3.select( g).classed( "selected", !isSelected);
+
+                // reappend dragged element as last
+                // so that its stays on top
+                g.parentNode.appendChild( g);
+            })
         // On Click Tooltip (Left Menu)
         svg.selectAll("circle")
             .data(sampleLabels)
@@ -148,7 +165,6 @@ function draw (num) {
             .on("click", function(d) {
                 d3.selectAll("#tooltip").classed("hidden", true);
                 if($('#tooltip').hasClass("hidden")){
-
                 //Get this bar's x/y values, then augment for the tooltip
                 let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
                 let yPosition = parseFloat(d3.select(this).attr("cy")) ;
@@ -188,7 +204,6 @@ function draw (num) {
                         console.log("Clicked stop");
                         sound.stop();
                     })
-                    d3.select(this).style('stroke', 'black');
 
                     //Show the tooltip
                 d3.select("#tooltip").classed("hidden", false);

@@ -26,7 +26,15 @@ Your directory should be structured the following way:
 --/Readme.MD
 ```
 ## Developing
+The directory "unsvizu" contains the source code for the web application. It is written in JavaScript, HTML, CSS and can therefore be edited in any common IDE or Editor.
 
+It is structured as follows:
+
+* ```unsvizu/index.html``` - contains the HTML code for the application. Here layout changes can be made
+* ```unviszu/css/style.css``` - The Stylesheet contains all settings concerning the style and layout of the application
+* ```unviszu/js/scatterMe.js``` - Contains all the logical functions of the application. Any changes to the application logic should be made here.
+* ```unviszu/js/service/data-service.js``` - Contains the functions for the GET and POST requests to get the Embedding Data provided by the unspeech feat server. 
+* ```unviszu/js/tsneExample.js``` - The webworker that runs the tsne Calculation.
 
 ## Built With
 

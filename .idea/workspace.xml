@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="directory restructure &amp; Abgabe">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unspeech" beforeDir="false" afterPath="$PROJECT_DIR$/unspeech" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unspeech/feat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/unspeech/feat_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unsvizu/unspeech/feat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/unsvizu/unspeech/feat_server.py" afterDir="false" />
-    </list>
+    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="directory restructure &amp; Abgabe" />
     <list id="7504f244-f7dc-464f-a73e-6ab009b3a9ed" name="directory restructure &amp; Abgabe" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +28,7 @@
     <session id="-1615301198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -247,7 +241,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -333,7 +327,7 @@
       <workItem from="1538759173655" duration="137000" />
       <workItem from="1538759340176" duration="1070000" />
       <workItem from="1538760428477" duration="4707000" />
-      <workItem from="1538926959541" duration="56000" />
+      <workItem from="1538926959541" duration="231000" />
     </task>
     <task id="LOCAL-00001" summary="get that shit done">
       <created>1530215497198</created>
@@ -454,17 +448,23 @@
       <option name="project" value="LOCAL" />
       <updated>1538761786587</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="directory restructure &amp; Abgabe">
+      <created>1538927042299</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1538927042299</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193433000" />
+    <option name="totallyTimeSpent" value="193608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1253" y="27" width="1242" height="1413" extended-state="4" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22110553" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22110553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -483,7 +483,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.589313" weight="0.34345794" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.41068703" side_tool="true" weight="0.3322091" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.44003114" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.44003114" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24979253" />
@@ -559,6 +559,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/unspeech/unspeech" />
+      <path value="$PROJECT_DIR$/unsvizu/unspeech" />
+    </ignored-roots>
     <MESSAGE value="get that shit done" />
     <MESSAGE value="data is shit" />
     <MESSAGE value="better" />

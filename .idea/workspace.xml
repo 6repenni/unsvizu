@@ -4,6 +4,9 @@
     <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="directory restructure &amp; Abgabe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unspeech" beforeDir="false" afterPath="$PROJECT_DIR$/unspeech" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unspeech/feat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/unspeech/feat_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unsvizu/unspeech/feat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/unsvizu/unspeech/feat_server.py" afterDir="false" />
     </list>
     <list id="7504f244-f7dc-464f-a73e-6ab009b3a9ed" name="directory restructure &amp; Abgabe" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,13 +45,13 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="8" />
           <entry key="project.open.time.8" value="5" />
-          <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="MD" value="1084" />
+          <entry key="MD" value="2110" />
           <entry key="css" value="96" />
           <entry key="html" value="595" />
           <entry key="js" value="4211" />
@@ -60,24 +63,24 @@
           <entry key="CSS" value="96" />
           <entry key="HTML" value="595" />
           <entry key="JavaScript" value="4211" />
-          <entry key="Markdown" value="1084" />
+          <entry key="Markdown" value="2110" />
           <entry key="PLAIN_TEXT" value="819" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MD" value="2" />
-          <entry key="css" value="1" />
-          <entry key="html" value="1" />
-          <entry key="js" value="2" />
+          <entry key="css" value="3" />
+          <entry key="html" value="2" />
+          <entry key="js" value="6" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="2" />
+          <entry key="CSS" value="3" />
+          <entry key="HTML" value="2" />
+          <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -85,15 +88,29 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="357">
-                <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+              <first_editor relative-caret-position="34">
+                <caret line="2" column="148" selection-start-line="2" selection-start-column="148" selection-end-line="2" selection-end-column="148" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unsvizu/js/scatterMe.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unsvizu/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -163,9 +180,6 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/unsvizu/node_modules" />
-  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/unsvizu/package.json" />
@@ -183,6 +197,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,13 +206,35 @@
               <item name="unsvizu" type="b2602c69:ProjectViewProjectNode" />
               <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="unsvizu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unsvizu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unsvizu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unsvizu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,7 +332,8 @@
       <workItem from="1538755561718" duration="1144000" />
       <workItem from="1538759173655" duration="137000" />
       <workItem from="1538759340176" duration="1070000" />
-      <workItem from="1538760428477" duration="1346000" />
+      <workItem from="1538760428477" duration="4707000" />
+      <workItem from="1538926959541" duration="56000" />
     </task>
     <task id="LOCAL-00001" summary="get that shit done">
       <created>1530215497198</created>
@@ -408,17 +447,24 @@
       <option name="project" value="LOCAL" />
       <updated>1538760920361</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="directory restructure &amp; Abgabe">
+      <created>1538761786587</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1538761786587</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190016000" />
+    <option name="totallyTimeSpent" value="193433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1253" y="27" width="1242" height="1413" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21691792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22110553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -437,7 +483,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.589313" weight="0.34345794" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.41068703" side_tool="true" weight="0.3322091" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.44003114" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.44003114" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24979253" />
@@ -552,13 +598,40 @@
     <entry file="file://$PROJECT_DIR$/js/tsneExample.js" />
     <entry file="file://$PROJECT_DIR$/js/service/data-service.js" />
     <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/unsvizu/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsvizu/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsvizu/js/drawd3.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsvizu/js/d3Scatter.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsvizu/js/service/tsne.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="148" selection-start-line="2" selection-start-column="148" selection-end-line="2" selection-end-column="148" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsvizu/js/scatterMe.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsvizu/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>

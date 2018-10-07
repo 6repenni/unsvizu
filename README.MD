@@ -1,6 +1,6 @@
 # Unspeech Visualization
 
-This is a visualisation of unspeech (unspeech.net/preview) embeddings powered by T-SNE. 
+This is a visualisation of unspeech (unspeech.net/preview) embeddings powered by T-SNE. A userguide can be found in this repository as userguide.pdf 
 ![](preview.png)
 ### Prerequisites
 * Running:  [Docker](http://docker.io)

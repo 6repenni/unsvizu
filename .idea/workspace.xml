@@ -1,413 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="unspeech added">
-      <change afterPath="$PROJECT_DIR$/archiv/PCA.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/_pca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/indexALT.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/tester.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/unspeechvizbootstrapped.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/.Dockerfile.swp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/.backup/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/_feats.scp.swp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/cluster_utt2spk_min_cluster_size_5_min_sample_3_l2norm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/cmvn_dev.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/cmvn_dev.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.1.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.1.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.10.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.10.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.11.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.11.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.12.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.12.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.13.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.13.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.14.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.14.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.15.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.15.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.16.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.16.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.17.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.17.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.18.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.18.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.19.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.19.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.2.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.2.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.20.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.20.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.3.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.3.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.4.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.4.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.5.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.5.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.6.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.6.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.7.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.7.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.8.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.8.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.9.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/data/raw_mfcc_dev.9.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/cluster_utt2spk_min_cluster_size_5_min_sample_3_l2norm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/glm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/spk_prefix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/stm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/text_orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/dev.orig/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/feats.lengths" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/glm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/cmvn_dev.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.10.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.11.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.12.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.13.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.15.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.16.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.17.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.18.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.19.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.20.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.3.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.4.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.5.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.6.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.7.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.8.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/log/make_mfcc_dev.9.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/spk_prefix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/1/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/2/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/3/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/4/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/5/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/6/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/7/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/split8/8/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/stm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/text_orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/utt2dur" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/dev/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/.backup/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/cluster_utt2spk_min_cluster_size_5_min_sample_3_l2norm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/cmvn_test.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/cmvn_test.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.1.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.1.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.10.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.10.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.11.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.11.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.12.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.12.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.13.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.13.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.14.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.14.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.15.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.15.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.16.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.16.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.17.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.17.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.18.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.18.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.19.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.19.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.2.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.2.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.20.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.20.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.3.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.3.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.4.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.4.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.5.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.5.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.6.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.6.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.7.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.7.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.8.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.8.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.9.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/data/raw_mfcc_test.9.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/glm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/cmvn_test.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.10.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.11.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.12.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.13.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.15.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.16.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.17.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.18.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.19.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.20.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.3.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.4.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.5.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.6.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.7.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.8.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/log/make_mfcc_test.9.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/spk_prefix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/1/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/2/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/3/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/4/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/5/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/6/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/7/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/cmvn.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/feats.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/split8/8/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/stm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/cluster_utt2spk_min_cluster_size_5_min_sample_3_l2norm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/glm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/reco2file_and_channel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/segments" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/spk2utt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/spk_prefix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/stm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/text_orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/test.orig/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/text_orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/utt2dur" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/utt2spk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/kaldi_meta/test/wav.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/AlGore_2009.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/BarrySchwartz_2005G.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/BlaiseAguerayArcas_2007.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/BrianCox_2009U.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/CraigVenter_2008.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/DavidMerrill_2009.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/ElizabethGilbert_2009.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/sph/WadeDavis_2003.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/AlGore_2009.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/BarrySchwartz_2005G.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/BlaiseAguerayArcas_2007.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/BrianCox_2009U.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/CraigVenter_2008.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/DavidMerrill_2009.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/ElizabethGilbert_2009.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/WadeDavis_2003.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/dev/stm/_AlGore_2009.stm.swp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/AimeeMullins_2009P.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/BillGates_2010.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/DanBarber_2010.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/DanielKahneman_2010.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/EricMead_2009P.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/GaryFlake_2010.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/JamesCameron_2010.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/JaneMcGonigal_2010.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/MichaelSpecter_2010.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/RobertGupta_2010U.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/sph/TomWujec_2010U.sph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/AimeeMullins_2009P.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/BillGates_2010.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/DanBarber_2010.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/DanielKahneman_2010.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/EricMead_2009P.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/GaryFlake_2010.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/JamesCameron_2010.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/JaneMcGonigal_2010.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/MichaelSpecter_2010.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/RobertGupta_2010U.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/tedlium/test/stm/TomWujec_2010U.stm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/testfeats.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech64/dev/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech64/dev/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech64/dev/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech64/test/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech64/test/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech64/test/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_16_stride1/dev/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_16_stride1/dev/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_16_stride1/dev/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_16_stride1/test/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_16_stride1/test/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_16_stride1/test/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride1/dev/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride1/dev/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride1/dev/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride1/test/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride1/test/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride1/test/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride2/dev/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride2/dev/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride2/dev/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride2/test/ivector_online.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride2/test/ivector_online.scp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/feats/unspeech_phn_32_stride2/test/ivector_period" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unspeech/isaeofj.ark" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unsvizu/unspeech" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unspeech" beforeDir="false" afterPath="$PROJECT_DIR$/unspeech" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unspeech/feat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/unspeech/feat_server.py" afterDir="false" />
-    </list>
+    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="unspeech added" />
     <list id="7504f244-f7dc-464f-a73e-6ab009b3a9ed" name="directory restructure &amp; Abgabe" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -434,7 +28,7 @@
     <session id="-1615301198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -511,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -627,6 +221,11 @@
               <item name="unsvizu" type="b2602c69:ProjectViewProjectNode" />
               <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="unsvizu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unsvizu" type="462c0819:PsiDirectoryNode" />
+              <item name="unspeech" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -637,7 +236,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539206176875" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539209832424" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -734,7 +333,7 @@
       <workItem from="1539189927808" duration="21000" />
       <workItem from="1539189961789" duration="1892000" />
       <workItem from="1539206126581" duration="58000" />
-      <workItem from="1539206199573" duration="1378000" />
+      <workItem from="1539206199573" duration="1601000" />
     </task>
     <task id="LOCAL-00001" summary="get that shit done">
       <created>1530215497198</created>
@@ -869,11 +468,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538927251649</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="unspeech added">
+      <created>1539209556258</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1539209556258</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197670000" />
+    <option name="totallyTimeSpent" value="197893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1253" height="1413" extended-state="4" />
@@ -1065,8 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

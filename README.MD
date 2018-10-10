@@ -12,7 +12,7 @@ This is a visualisation of unspeech (unspeech.net/preview) embeddings powered by
 2. Clone [unspeech](https://gitlab.com/milde/unspeech) into the directory of this repository
 3. Build the Docker container e.g.: (```sudo docker build -t my-image2 .```)
 4. Run the Docker container e.g.: (```sudo docker run -d my-image2```)
-5. Visit localhost in browser
+5. Visit ```http://localhost/static``` in browser
 
 ##### Directory structure
 Your directory should be structured the following way:

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="unspeech rm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
     <list id="7504f244-f7dc-464f-a73e-6ab009b3a9ed" name="directory restructure &amp; Abgabe" comment="directory restructure &amp; Abgabe" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,7 +30,7 @@
     <session id="-1615301198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -41,10 +40,10 @@
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="12" />
+          <entry key="project.open.time.7" value="13" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -214,8 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,6 +224,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -234,7 +233,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539210580471" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539210719975" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -332,7 +331,8 @@
       <workItem from="1539189961789" duration="1892000" />
       <workItem from="1539206126581" duration="58000" />
       <workItem from="1539206199573" duration="1601000" />
-      <workItem from="1539209772685" duration="784000" />
+      <workItem from="1539209772685" duration="939000" />
+      <workItem from="1539245313726" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="get that shit done">
       <created>1530215497198</created>
@@ -481,17 +481,24 @@
       <option name="project" value="LOCAL" />
       <updated>1539209853923</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="unspeech rm">
+      <created>1539210586825</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1539210586825</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198677000" />
+    <option name="totallyTimeSpent" value="199431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1253" height="1413" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2439834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24813278" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -508,9 +515,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.589313" weight="0.34345794" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.45311204" side_tool="true" visible="true" weight="0.43925235" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4539419" side_tool="true" visible="true" weight="0.43925235" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.546888" visible="true" weight="0.43925235" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.5460581" visible="true" weight="0.43925235" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -657,13 +664,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unsvizu/js/scatterMe.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unsvizu/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="238">
+            <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -674,13 +681,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="238">
-            <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/unsvizu/js/scatterMe.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsvizu/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>

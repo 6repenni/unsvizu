@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="" />
     <list id="7504f244-f7dc-464f-a73e-6ab009b3a9ed" name="directory restructure &amp; Abgabe" comment="directory restructure &amp; Abgabe" />
-    <list default="true" id="1b4b8414-a8f9-4179-bf53-203a7d3861f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unspeech" beforeDir="false" afterPath="$PROJECT_DIR$/unspeech" afterDir="false" />
-    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -523,7 +519,7 @@
       <workItem from="1539206199573" duration="1601000" />
       <workItem from="1539209772685" duration="939000" />
       <workItem from="1539245313726" duration="599000" />
-      <workItem from="1539265071419" duration="13617000" />
+      <workItem from="1539265071419" duration="14905000" />
     </task>
     <task id="LOCAL-00001" summary="get that shit done">
       <created>1530215497198</created>
@@ -686,15 +682,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539333664694</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Readme.md fix">
+      <created>1539335341640</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1539335341640</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213048000" />
+    <option name="totallyTimeSpent" value="214336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1366" height="742" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -813,7 +815,8 @@
     <MESSAGE value="unspeech added" />
     <MESSAGE value="unspeech rm" />
     <MESSAGE value="fix for dockerfile (had commented out important lines)&#10;reformatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix for dockerfile (had commented out important lines)&#10;reformatting" />
+    <MESSAGE value="Readme.md fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme.md fix" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

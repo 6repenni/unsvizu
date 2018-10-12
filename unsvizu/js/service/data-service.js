@@ -20,13 +20,17 @@ function listRepos(){
                     if (d.includes(filterSub)){
                         console.log("get filtered son");
                     }else{
-                        console.log(escape(d));
-                        $("#datasetBody").append("<a onclick=\"getVectors(&quot"+d+"&quot)\">" + d + "</a>" +"<br/>");
+                        $("#datasetBody").append("<a onclick=\"getVectors(&quot"+d+"&quot)\">" + "Dataset: " + "<span class=\"Dataset\">"+ d.split("/")[2] + "</span>"+" - " + "Type: " + "<span class=\"datasetType\">"+ d.split("/")[3] + "</span>"+ "</a>" +"<br/>");
                     }
                 }
             }
         }
     });
+}
+function transformMenuText(text){
+    let splitText = text.split("/");
+    let composeText = "Dataset: " + splitText[2] +" - " +"Type: "+ splitText[3]
+    return composeText;
 }
 RegExp.escape = function(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");

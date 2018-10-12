@@ -45,6 +45,9 @@ function init () {
             .attr("width", 960)
             .attr("height", 900)
             .call(responsivefy)
+            .call(d3.zoom().on("zoom", function () {
+                svg.attr("transform", d3.event.transform)
+            }))
             .append("g");
 
         worker.onmessage = function (e) {
@@ -136,38 +139,28 @@ function draw (num) {
 
         //Mouseover Tooltip
         svg.selectAll("circle")
-            .data(sampleNames)
-            .on("mouseover", function(d){d3.select(this).attr('r', 10); return tooltip.style("visibility", "visible").text(d);})
+            .data(sampleLabels)
+            .on("mouseover", function(d){
+                let splittedLabel = d.split("_");
+                d3.select(this).attr('r', 10);
+                return tooltip.style("visibility", "visible")
+                    .text("Speaker: " + splittedLabel[1] + " - " + "Date & Time: "+ splittedLabel[2]);
+            })
             .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
             .on("mouseout", function(){d3.select(this).attr('r', 5); return tooltip.style("visibility", "hidden");});
 
-        svg.selectAll("circle")
-            .data(sampleLabels)
-            .on( "click", function( d, i) {
-                var e = d3.event,
-                    g = this.parentNode,
-                    isSelected = d3.select( g).classed( "selected");
-
-                if( !e.ctrlKey) {
-                    d3.selectAll( 'g.selected').classed( "selected", false);
-                }
-
-                d3.select( g).classed( "selected", !isSelected);
-
-                // reappend dragged element as last
-                // so that its stays on top
-                g.parentNode.appendChild( g);
-            })
         // On Click Tooltip (Left Menu)
         svg.selectAll("circle")
             .data(sampleLabels)
-            .style('stroke', 'none')
             .on("click", function(d) {
+                svg.selectAll("circle").style('stroke', 'none');//classed('active', false);
+                d3.select(this).style('stroke', 'black');//classed('active', true);
                 d3.selectAll("#tooltip").classed("hidden", true);
                 if($('#tooltip').hasClass("hidden")){
                 //Get this bar's x/y values, then augment for the tooltip
                 let xPosition = parseFloat(d3.select(this).attr("cx")) + xScale / 2;
                 let yPosition = parseFloat(d3.select(this).attr("cy")) ;
+
                 //required because of the json format received from API
                 let splittedLabel = d.split("_");
                 let fileSource = "audio/" + splittedLabel[1] + "_" + splittedLabel[2].split(/-(.+)/)[0] + ".mp3";
@@ -326,7 +319,12 @@ function drawUpdate (embedding) {
 
     svg.selectAll("circle")
         .data(sampleNames)
-        .on("mouseover", function(d){d3.select(this).attr('r', 10); return tooltip.style("visibility", "visible").text(d);})
+        .on("mouseover", function(d){
+            let splittedLabel = d.split("_");
+            d3.select(this).attr('r', 10);
+            return tooltip.style("visibility", "visible")
+                .text("Speaker: " + splittedLabel[1] + " - " + "Date & Time: "+ splittedLabel[2]);
+        })
         .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
         .on("mouseout", function(){d3.select(this).attr('r', 5); return tooltip.style("visibility", "hidden");});
 
@@ -336,6 +334,8 @@ function drawUpdate (embedding) {
         .data(sampleLabels)
         .style('stroke', 'none')
         .on("click", function(d) {
+            svg.selectAll("circle").style('stroke', 'none');//classed('active', false);
+            d3.select(this).style('stroke', 'black');//classed('active', true);
             d3.selectAll("#tooltip").classed("hidden", true);
             if($('#tooltip').hasClass("hidden")){
 

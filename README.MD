@@ -9,7 +9,7 @@ This is a visualisation of unspeech (unspeech.net/preview) embeddings powered by
 ## Getting Started (Running)
 
 1. Clone this repository
-2. Clone [unspeech](https://gitlab.com/milde/unspeech) into the directory of this repository
+2. Clone [unspeech](https://gitlab.com/milde/unspeech) into the same directory as this repository and merge the unspeech directory from this repository with the original unspeech application (keep files from this repository).
 3. Build the Docker container e.g.: (```sudo docker build -t myimage .```)
 4. Run the Docker container e.g.: (```sudo docker run -d --name mycontainer -p 80:80 myimage```)
 5. Visit ```http://localhost/static``` in browser
@@ -19,6 +19,7 @@ Your directory should be structured the following way:
 ```
 /
 --/unspeech/
+--/unspeech/feats/ => required and has to contain *.ark files containing the embeddings for the visualization to work
 --/unsvizu/
 --/Dockerfile
 --/nginx.conf

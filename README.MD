@@ -10,8 +10,8 @@ This is a visualisation of unspeech (unspeech.net/preview) embeddings powered by
 
 1. Clone this repository
 2. Clone [unspeech](https://gitlab.com/milde/unspeech) into the directory of this repository
-3. Build the Docker container e.g.: (```sudo docker build -t my-image2 .```)
-4. Run the Docker container e.g.: (```sudo docker run -d my-image2```)
+3. Build the Docker container e.g.: (```sudo docker build -t myimage .```)
+4. Run the Docker container e.g.: (```sudo docker run -d --name mycontainer -p 80:80 myimage```)
 5. Visit ```http://localhost/static``` in browser
 
 ##### Directory structure
